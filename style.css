@@ -1,0 +1,85 @@
+#container{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+button {
+  font-size: 1.1rem; /* Slightly smaller for better balance */
+  font-weight: 600;
+  color: #ffffff;
+  
+  /* Visuals & Colors */
+  background-color: #00838f; /* A deeper, accessible cyan/teal so white text is readable */
+  padding: 12px 24px;        /* Fixed: No comma between values */
+  border: none;              /* Clean, modern look instead of a thick border */
+  border-radius: 6px;        /* Smooth, rounded corners */
+  
+  /* Interactive Elements */
+  cursor: pointer;           /* Changed from 'progress' to 'pointer' (standard for clickable buttons) */
+  transition: all 0.2s ease-in-out; /* Makes the hover effect smooth */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* User-friendly hover and active states */
+button:hover {
+  background-color: #006064; /* Darkens slightly when hovered */
+  transform: translateY(-1px); /* Subtle lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(1px); /* Sinks slightly when clicked, feeling like a real button */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+button:focus-visible {
+  outline: 3px solid #00e5ff; /* Accessibility: helps keyboard users see what's selected */
+  outline-offset: 2px;
+}
+
+input{
+    font-size: 1.5rem;
+    background-color: beige;
+    color: gray;
+    padding: 10px 15px;
+    border-radius: 20%;
+}
+
+#DiceDisplay {
+  display: flex;         /* Aligns GIF images horizontally */
+  flex-wrap: wrap;       /* Automatically pushes GIFs to the next line if crowded */
+  justify-content: center; /* Centers items horizontally on the main axis */
+  gap: 15px;             /* Spacing between individual dice GIFs */
+  padding: 10px;
+}
+
+.dice-png{
+    width: 100px;
+    height: 100px;
+}
+
+rolling-dice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #1a1a1a;
+  color: #ffffff; /* Rolling color (e.g., Red) */
+  font-family: monospace;
+  font-size: 24px;
+  font-weight: bold;
+  border: 2px solid #ff0055;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Style applied automatically when the roll finishes */
+rolling-dice.rolled {
+  color: #ffffff; /* Final value color (e.g., Green) */
+  border: 2px solid #000000;
+  border-radius: 8px;
+  background-color: #306d13;
+}
